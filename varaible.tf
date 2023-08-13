@@ -13,10 +13,6 @@ variable "vpc_tag" {
   
 }
 ############ SUBNET ##########################
-variable "vpc_id" {
-    type = string  
-}
-
 variable "subnet_cidr" {
     type = string
     default = "172.16.10.0/24"  
@@ -29,11 +25,6 @@ variable "subent_name" {
     }
 } 
 ############ SECURITY GROUP ###################
-variable "vpc_id" {
-    type = string
-  
-}
-
 variable "sg_name" {
     type = map(any)
     default = {
@@ -42,9 +33,6 @@ variable "sg_name" {
   
 }
 ########### NIC ###############################
-variable "subnet_id" { 
-    type = string
-}
 
 variable "private_ips" {
     type = list(string)
@@ -68,11 +56,6 @@ variable "instance_ami" {
 variable "instance_type" {
   type = string
   default = "t2.micro"
-}
-
-variable "nic_id" {
-    type = string
-  
 }
 
 variable "Instance_Name" {
