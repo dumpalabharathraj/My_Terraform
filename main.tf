@@ -20,7 +20,6 @@ module "sg" {
 module "nic" {
     source = "./modules/aws_nic"
     private_ips = var.private_ips
-    subnet_id = module.subnet.subnet_id
     nic_name = var.nic_name  
 }
 
