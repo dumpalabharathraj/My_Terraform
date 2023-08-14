@@ -13,8 +13,6 @@ module "subnet" {
 
 module "sg" {
     source = "./modules/aws_security_group"
-    vpc_id = module.vpc.vpc_id
-    sg_name = var.sg_name  
 }
 
 module "nic" {
