@@ -7,7 +7,6 @@ module "vpc" {
 module "subnet" {
     source = "./modules/aws_subnet"
     vpc_id = module.vpc.vpc_id
-    cidr_block = var.subnet_cidr
     subnet_name = var.subnet_name  
 }
 
